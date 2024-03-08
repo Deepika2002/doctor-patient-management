@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Home Page</title>
+    <link rel="stylesheet" href="/patient-home.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ patient.name }}</h1>
+        <div class="patient-details">
+            <div class="details-item">
+                <span class="details-label">Name:</span> {{ patient.name }}
+            </div>
+            <div class="details-item">
+                <span class="details-label">Age:</span> {{ patient.age }}
+            </div>
+            <div class="details-item">
+                <span class="details-label">Gender:</span> {{ patient.gender }}
+            </div>
+            <div class="details-item">
+                <span class="details-label">Condition:</span> {{ patient.condition }}
+            </div>
+        
+            <div class="doctor-suggestions">
+               <h2>Doctor Suggestions</h2>
+               <ul>
+                <!-- Display suggestions here -->
+                {{#each suggestions}}
+                <li>{{ this.suggestion }}</li>
+                {{/each}}
+                </ul>
+            </div>
+
+            <div class="values-section">
+            <h2>Values</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Value1</th>
+                        <th>Value2</th>
+                        <th>Value3</th>
+                        <th>Value4</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each patientData.values}}
+                        <tr>
+                            <td>{{ this.value1 }}</td>
+                            <td>{{ this.value2 }}</td>
+                            <td>{{ this.value3 }}</td>
+                            <td>{{ this.value4 }}</td>
+                        </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Home Page</title>
+    <link rel="stylesheet" href="/doctor-home.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome, {{ doctor.name }}</h1>
+        <div class="doctor-details">
+            <h2>Doctor Details</h2>
+            <p>ID: {{ doctor._id }}</p>
+            <p>Name: {{ doctor.name }}</p>
+            <!-- Add other doctor details here -->
+        </div>
+        <div class="patients-list">
+    <h2>Patients List</h2>
+    <form id="patientForm" action="/find-patient-details" method="GET">
+        <select name="patientId" id="patientId">
+            {{#each pats}}
+                <option value="{{ this._id }}">{{ this.name }}</option>
+            {{/each}}
+        </select>
+        <input type="submit" value="Find">
+    </form>
+</div>
+
+
+</div>
+
+    </div>
+</body>
+</html>

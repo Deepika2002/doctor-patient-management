@@ -1,0 +1,44 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #328f8a; /* Background color from login CSS */
+    background-image: linear-gradient(45deg,#328f8a,#08ac4b); /* Background gradient from login CSS */
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #328f8a; /* Title color from login CSS */
+}
+
+.patient-details {
+    margin-top: 20px;
+    background-color: #FFFFFF; /* Background color from login CSS */
+    max-width: 360px; /* Match width with login form */
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24); /* Box shadow from login CSS */
+    border-radius: 5px; /* Border radius from login CSS */
+}
+
+.details-item {
+    margin-bottom: 10px;
+}
+
+.details-label {
+    font-weight: bold;
+    color: #328f8a; /* Label color from login CSS */
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home Page</title>
+    <link rel="stylesheet" href="/admin-home.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left-container">
+            <h2>Doctors</h2>
+            <ul>
+                {{#each doctors}}
+                <li>{{ this.name }}</li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="right-container">
+            <h2>Patients</h2>
+            <ul>
+                {{#each patients}}
+                <li>{{ this.name }}</li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

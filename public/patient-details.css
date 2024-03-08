@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #328f8a; /* Background color from login CSS */
+    background-image: linear-gradient(45deg,#328f8a,#08ac4b); /* Background gradient from login CSS */
+    color: #333; /* Text color */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff; /* Container background color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.patient-details {
+    margin-bottom: 20px;
+}
+
+.suggestion-box {
+    background-color: #f2f2f2; /* Suggestion box background color */
+    padding: 20px;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Box shadow */
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#submitBtn {
+    padding: 10px 20px;
+    background-color: #007bff; /* Submit button background color */
+    color: #fff; /* Submit button text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#submitBtn:hover {
+    background-color: #0056b3; /* Hover color for submit button */
+}
+
+#submitMessage {
+    display: none;
+    color: #28a745; /* Color for submission successful message */
+    margin-top: 10px;
+}

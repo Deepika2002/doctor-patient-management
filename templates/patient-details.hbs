@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Details</title>
+    <link rel="stylesheet" href="/patient-details.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Patient Details</h1>
+        <div class="patient-details">
+            <p><strong>Name:</strong> {{ patient.name }}</p>
+            <p><strong>Age:</strong> {{ patient.age }}</p>
+            <p><strong>Gender:</strong> {{ patient.gender }}</p>
+            <p><strong>Condition:</strong> {{ patient.condition }}</p>
+        </div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Value 1</th>
+                    <th>Value 2</th>
+                    <th>Value 3</th>
+                    <th>Value 4</th>
+                </tr>
+            </thead>
+        <tbody>
+            {{#each patientData.values}}
+            <tr>
+                <td>{{ this.value1 }}</td>
+                <td>{{ this.value2 }}</td>
+                <td>{{ this.value3 }}</td>
+                <td>{{ this.value4 }}</td>
+            </tr>
+            {{/each}}
+            </tbody>
+            </table>
+        <div class="suggestion-box">
+            <h2>Enter Suggestion</h2>
+            <form id="suggestionForm" method="POST">
+                <input type="hidden" name="patientId" id="patientId" value="{{ patient._id }}">
+                <textarea name="suggestion" id="suggestion" rows="4" cols="50"></textarea>
+                <br>
+                <input type="submit" value="Submit" id="submitBtn">
+            </form>
+
+            <p id="submitMessage" style="display: none;">Suggestion Sent!</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("suggestionForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+            
+            // Disable the textarea
+            document.getElementById("suggestion").disabled = true;
+
+            // Show the submission message
+            document.getElementById("submitMessage").style.display = "block";
+
+            // Get the patient ID and suggestion
+            const patientId = document.getElementById("patientId").value;
+            const suggestion = document.getElementById("suggestion").value;
+
+            // Modify the form action to include both parameters as a query string
+            const form = document.getElementById("suggestionForm");
+            form.action = `/submit-suggestion?patientId=${patientId}&suggestion=${suggestion}`;
+
+            // Submit the form
+            form.submit();
+        });
+    </script>
+    
+</body>
+</html>

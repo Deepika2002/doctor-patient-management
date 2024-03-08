@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/login.css">
+<title> Sign Up Screen </title>
+</head>
+<body>
+    <div class="login-page">
+        <div class="form">
+            <div class="login">
+                <div class="login-header">
+                    <h3>Doctor SignUp</h3>
+                    <p>Please enter your credentials to SignUp.</p>
+                </div>
+            </div>
+            <!-- Modify the form to include a hidden input for the signup type -->
+            <form class="login-form" action="/doctor-signup" method="post">
+                <input type="hidden" name="signupType" value="doctor"> <!-- Hidden input field for the signup type -->
+                <input type="text" name="name" placeholder="Name">
+                <input type="password" name="password" placeholder="Password">
+                <button>SignUp</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

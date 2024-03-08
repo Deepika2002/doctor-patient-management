@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/login.css">
+<title> Login Screen </title>
+</head>
+<body>
+  <div class="login-page">
+    <div class="form">
+      <div class="login">
+        <div class="login-header">
+          <h3>Doctor LOGIN</h3>
+          <p>Please enter your credentials to login.</p>
+        </div>
+      </div>
+      <form class="login-form" action="/doctor-login" method="post"> <!-- Corrected action -->
+        <input type="text" name="name" placeholder="Name">
+        <input type="password" name="password" placeholder="Password">
+        <button>login</button>
+        <p class="message">Not registered? <a href="/signup">Create an account</a></p>
+
+        <div class="admin">
+            <a href="/login">Admin Login</a> <!-- Corrected href -->
+        </div>
+            
+        <div class="patient">
+            <a href="/patient-login">Patient Login</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
